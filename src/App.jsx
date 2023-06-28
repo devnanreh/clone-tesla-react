@@ -1,11 +1,19 @@
+import LandingHeader from './components/LandingHeader'
 import MainSection from './components/MainSection'
-import LandingHeader from './components/landingHeader'
+import ModelS from './components/ModelS'
 
 function App() {
   return (
     <>
       <LandingHeader />
-      <MainSection />
+      <div className="relative h-screen w-full snap-y snap-mandatory overflow-y-auto overflow-x-hidden scroll-smooth">
+        <div className="snap-center">
+          <MainSection />
+        </div>
+        <div className="snap-center">
+          <ModelS />
+        </div>
+      </div>
     </>
   )
 }

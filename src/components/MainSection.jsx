@@ -1,10 +1,15 @@
-import videoHome from '../assets/videoHome.webm'
-
 const MainSection = () => {
   return (
     <>
-      <div className="relative z-20 flex h-screen w-full flex-col items-center">
-        <h1 className="mt- mt-36 text-4xl font-medium text-white">Disfrute de Tesla</h1>
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute z-10 h-screen min-h-full w-screen overflow-hidden bg-cover object-cover"
+        src="/public/videoHome.webm"
+      />
+      <div className="relative z-40 flex h-screen w-full flex-col items-center">
+        <h1 className="mt- mt-48 text-4xl font-semibold text-white">Disfrute de Tesla</h1>
         <p className="mx-6 mb-4 mt-2 text-sm text-white">
           Programe una prueba de conducción hoy mismo
         </p>
@@ -16,9 +21,6 @@ const MainSection = () => {
             Prueba de conducción
           </a>
         </div>
-      </div>
-      <div className="absolute bottom-0 top-0 z-10 min-h-screen w-screen">
-        <video src={videoHome} autoPlay loop muted></video>
       </div>
     </>
   )
