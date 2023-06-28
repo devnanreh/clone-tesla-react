@@ -19,10 +19,32 @@ const LandingHeader = () => {
     })
   })
 
+  // Intersection Observer
+  const headerElement = document.querySelector('#landing-header')
+
+  const observerOptions = {
+    root: null, // default to the viewport
+    rootMargin: '0px', // as soon as the element is visible
+    threshold: 0.9, // visibility ratio
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const { isIntersecting } = entry
+      if (isIntersecting) {
+        const color = entry.target.getAttribute('data-header-color')
+        headerElement.style.color = color
+      }
+    })
+  }, observerOptions)
+
+  const sectionElements = document.querySelectorAll('.landing-section')
+  sectionElements.forEach((section) => observer.observe(section))
+
   return (
-    <header id="landing-header" className="absolute z-50 flex h-14 w-full text-white">
+    <header id="landing-header" className="absolute z-50 flex h-14 w-full invert">
       <div className="flex w-2/6 ps-8">
-        <img className="m-4 flex w-32 invert" src="/public/teslaLogo.svg" alt="Tesla Logo" />
+        <img className="m-4 flex w-32" src="/public/teslaLogo.svg" alt="Tesla Logo" />
       </div>
       <div className="flex w-2/6 items-center justify-center">
         <ol className="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-current">
@@ -65,7 +87,7 @@ const LandingHeader = () => {
       {/* BackDrop */}
       <div
         id="menu-backdrop"
-        class="absolute left-0 top-0 -z-10 h-[var(--height)] w-[var(--width)] translate-x-[var(--left)] translate-y-[var(--top)] rounded bg-black/5 opacity-0 backdrop-blur-lg transition-all delay-75 duration-500 ease-in-out"
+        className="absolute left-0 top-0 -z-10 h-[var(--height)] w-[var(--width)] translate-x-[var(--left)] translate-y-[var(--top)] rounded bg-black/5 opacity-0 backdrop-blur-lg transition-all delay-75 duration-500 ease-in-out"
       ></div>
     </header>
   )

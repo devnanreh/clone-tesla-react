@@ -1,5 +1,6 @@
 import LandingHeader from './components/LandingHeader'
 import MainSection from './components/MainSection'
+import Model3 from './components/Model3'
 import ModelS from './components/ModelS'
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
         </div>
         <div className="snap-center">
           <ModelS />
+        </div>
+        <div className="snap-center">
+          <Model3 />
         </div>
       </div>
     </>

@@ -5,7 +5,7 @@ const MainSection = () => {
         autoPlay
         loop
         muted
-        className="absolute z-10 h-screen min-h-full w-screen overflow-hidden bg-cover object-cover"
+        className="absolute z-10 h-screen min-h-full w-screen overflow-hidden object-cover object-center"
         src="/public/videoHome.webm"
       />
       <div className="relative z-40 flex h-screen w-full flex-col items-center">
