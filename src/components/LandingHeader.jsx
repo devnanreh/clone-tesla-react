@@ -1,8 +1,28 @@
 const LandingHeader = () => {
+  const listItem = document.querySelectorAll('#landing-header li')
+  const menuBackDrop = document.querySelector('#menu-backdrop')
+
+  listItem.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      const { left, top, width, height } = item.getBoundingClientRect()
+      menuBackDrop.style.setProperty('--left', `${left}px`)
+      menuBackDrop.style.setProperty('--top', `${top}px`)
+      menuBackDrop.style.setProperty('--width', `${width}px`)
+      menuBackDrop.style.setProperty('--height', `${height}px`)
+      menuBackDrop.style.opacity = '1'
+      menuBackDrop.style.visibility = 'visible'
+
+      item.addEventListener('mouseleave', () => {
+        menuBackDrop.style.opacity = '0'
+        menuBackDrop.style.visibility = 'hidden'
+      })
+    })
+  })
+
   return (
-    <header className="fixed z-40 flex h-14 w-full text-white">
-      <div className="flex w-2/6 px-12 py-4">
-        <img className="w-32 invert" src="/public/teslaLogo.svg" alt="Tesla Logo" />
+    <header id="landing-header" className="absolute z-50 flex h-14 w-full text-white">
+      <div className="flex w-2/6 ps-8">
+        <img className="m-4 flex w-32 invert" src="/public/teslaLogo.svg" alt="Tesla Logo" />
       </div>
       <div className="flex w-2/6 items-center justify-center">
         <ol className="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-current">
@@ -26,8 +46,8 @@ const LandingHeader = () => {
           </li>
         </ol>
       </div>
-      <div className="flex w-2/6 items-center justify-end">
-        <ul className="flex pe-8 text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-6 [&>li>a]:text-current">
+      <div className="flex w-2/6 items-center justify-end pe-8">
+        <ul className="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-current">
           <li>
             <a href="">Soporte</a>
           </li>
@@ -42,6 +62,11 @@ const LandingHeader = () => {
           </li>
         </ul>
       </div>
+      {/* BackDrop */}
+      <div
+        id="menu-backdrop"
+        class="absolute left-0 top-0 -z-10 h-[var(--height)] w-[var(--width)] translate-x-[var(--left)] translate-y-[var(--top)] rounded bg-black/5 opacity-0 backdrop-blur-lg transition-all delay-75 duration-500 ease-in-out"
+      ></div>
     </header>
   )
 }
