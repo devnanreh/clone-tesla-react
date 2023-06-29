@@ -1,12 +1,12 @@
-const Model3 = () => {
+const ModelY = () => {
   return (
     <>
       <div
         className="flex h-screen min-h-full w-screen flex-col overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: "url('/public/model3.avif')" }}
+        style={{ backgroundImage: "url('/public/modelY.avif')" }}
       >
         <h1 className="mt-48 flex justify-center px-6 text-4xl font-semibold leading-10 tracking-tighter">
-          Model 3
+          Model Y
         </h1>
         <p className="flex justify-center px-6 pb-3.5 pt-1 text-sm font-normal leading-5 underline underline-offset-4">
           Concertar una prueba de conducción
@@ -35,4 +35,4 @@ const Model3 = () => {
   )
 }
 
-export default Model3
+export default ModelY
