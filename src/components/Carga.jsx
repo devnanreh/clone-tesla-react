@@ -2,15 +2,13 @@ const Carga = () => {
   return (
     <>
       <div
-        className="flex h-screen min-h-full w-screen flex-col overflow-hidden bg-cover bg-center"
+        className="lastSection flex h-screen w-full flex-col bg-cover bg-center"
         style={{ backgroundImage: "url('/public/charge.avif')" }}
       >
         <h1 className="mt-48 flex justify-center px-6 text-4xl font-semibold leading-10 tracking-tighter">
           Accesorios
         </h1>
-        <p className="flex justify-center px-6 pb-3.5 pt-1 text-sm font-normal leading-5">
-          Energía para todos
-        </p>
+
         <div className="flex flex-grow flex-col justify-end pb-16">
           <div className="mx-auto flex gap-x-6 gap-y-4 py-4 text-center">
             <a

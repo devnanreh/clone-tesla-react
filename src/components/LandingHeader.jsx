@@ -1,4 +1,5 @@
 const LandingHeader = () => {
+  // Backdrop
   const listItem = document.querySelectorAll('#landing-header li')
   const menuBackDrop = document.querySelector('#menu-backdrop')
 
@@ -21,6 +22,7 @@ const LandingHeader = () => {
 
   // Intersection Observer
   const headerElement = document.querySelector('#landing-header')
+  const sectionOne = document.querySelector('.home-intro')
 
   const observerOptions = {
     root: null, // default to the viewport
@@ -28,21 +30,23 @@ const LandingHeader = () => {
     threshold: 0.9, // visibility ratio
   }
 
-  const observer = new IntersectionObserver((entries) => {
+  const sectionOneObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      const { isIntersecting } = entry
-      if (isIntersecting) {
-        const color = entry.target.getAttribute('data-header-color')
-        headerElement.style.color = color
+      if (entry.isIntersecting) {
+        headerElement.classList.add('invert')
+      } else {
+        headerElement.classList.remove('invert')
       }
     })
   }, observerOptions)
 
-  const sectionElements = document.querySelectorAll('.landing-section')
-  sectionElements.forEach((section) => observer.observe(section))
+  sectionOneObserver.observe(sectionOne)
 
   return (
-    <header id="landing-header" className="absolute z-50 flex h-14 w-full invert">
+    <header
+      id="landing-header"
+      className="absolute z-50 flex h-14 w-full text-black transition duration-500"
+    >
       <div className="flex w-2/6 ps-8">
         <img className="m-4 flex w-32" src="/public/teslaLogo.svg" alt="Tesla Logo" />
       </div>

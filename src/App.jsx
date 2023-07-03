@@ -1,4 +1,5 @@
 import Carga from './components/Carga'
+import Footer from './components/Footer'
 import LandingHeader from './components/LandingHeader'
 import MainSection from './components/MainSection'
 import Model3 from './components/Model3'
@@ -11,7 +12,8 @@ function App() {
   return (
     <>
       <LandingHeader />
-      <div className="relative h-screen w-full snap-y snap-mandatory overflow-y-auto overflow-x-hidden scroll-smooth">
+
+      <div className="relative flex h-screen w-full snap-y snap-mandatory flex-col overflow-x-hidden overflow-y-scroll scroll-smooth">
         <div className="snap-center">
           <MainSection />
         </div>
@@ -34,6 +36,8 @@ function App() {
           <Carga />
         </div>
       </div>
+
+      <Footer />
     </>
   )
 }
