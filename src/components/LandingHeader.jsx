@@ -58,11 +58,11 @@ const LandingHeader = () => {
       className="absolute z-50 grid h-14 w-full grid-cols-2 justify-between text-black transition duration-500 lg:grid lg:grid-cols-3"
     >
       <div className="flex justify-start lg:ps-8">
-        <img className="m-4 flex w-32" src="/public/teslaLogo.svg" alt="Tesla Logo" />
+        <img className="m-4 flex w-32" src="/public/logo.svg" alt="Tesla Logo" />
       </div>
 
       <div className="hidden justify-center lg:inline-flex">
-        <ul className="flex items-center justify-center text-sm hover:cursor-pointer [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-current">
+        <ul className="flex items-center justify-center text-sm hover:cursor-pointer [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:font-semibold [&>li>a]:text-current">
           <li>
             <a href="https://tesla.com/models">Model S</a>
           </li>
@@ -85,7 +85,7 @@ const LandingHeader = () => {
       </div>
 
       <div className="hidden justify-end pe-8 lg:inline-flex">
-        <ul className="flex items-center justify-center text-sm hover:cursor-pointer [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-current">
+        <ul className="flex items-center justify-center text-sm hover:cursor-pointer [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:font-semibold [&>li>a]:text-current">
           <li>
             <a href="">Soporte</a>
           </li>
@@ -104,7 +104,7 @@ const LandingHeader = () => {
       <div className="flex justify-end py-2 pe-4 lg:hidden lg:pe-8">
         <button
           onClick={handleMenuNav}
-          className="items-center rounded bg-black/5 px-4 py-2 text-sm font-medium shadow-sm hover:bg-black/10"
+          className="items-center rounded bg-black/5 px-4 py-2 text-sm font-semibold shadow-sm hover:bg-black/10"
         >
           Menu
         </button>
