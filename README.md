@@ -1,4 +1,6 @@
-# Clone of Tesla Spain landing page with ReactJS and Tailwind CSS
+# Clone of Tesla Spain landing page
+
+### with ReactJS and Tailwind CSS
 
 #
 
@@ -12,6 +14,11 @@
 
 ![Tesla 3](public/captures/Capture3.png)
 
+#
+
 ## View Mobile version
 
-<img src="public/captures/ViewMobile1.png" width="500"><img src="public/captures/ViewMobile2.png" width="500">
+#
+
+<img src="public/captures/ViewMobile1.png" width="400">
+<img src="public/captures/ViewMobile2.png" width="400">
