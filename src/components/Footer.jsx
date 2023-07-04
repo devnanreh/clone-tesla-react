@@ -24,9 +24,9 @@ const Footer = () => {
   return (
     <footer
       id="landing-footer"
-      className="invisible fixed bottom-0 z-50 mt-auto flex h-12 w-full justify-center"
+      className="fixed bottom-0 z-50 mt-auto flex h-12 w-full flex-col items-center justify-center"
     >
-      <ol className="invisible flex flex-col items-center text-xs lg:visible lg:flex-row [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:pb-6 [&>li>a]:text-slate-500">
+      <ol className="flex h-4 flex-col items-center text-xs lg:flex-row [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:pb-6 [&>li>a]:text-slate-500">
         <li>
           <a href="">Tesla © 2023</a>
         </li>
@@ -47,6 +47,31 @@ const Footer = () => {
         </li>
       </ol>
     </footer>
+    // <footer
+    //   id="landing-footer"
+    //   className="fixed bottom-0 z-50 mt-auto flex h-12 w-full justify-center"
+    // >
+    //   <ol className="flex flex-col items-center text-xs lg:flex-row [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:pb-6 [&>li>a]:text-slate-500">
+    //     <li>
+    //       <a href="">Tesla © 2023</a>
+    //     </li>
+    //     <li>
+    //       <a href="">Privacidad y legal</a>
+    //     </li>
+    //     <li>
+    //       <a href="">Contacto</a>
+    //     </li>
+    //     <li>
+    //       <a href="">Noticias</a>
+    //     </li>
+    //     <li>
+    //       <a href="">Seguir informado</a>
+    //     </li>
+    //     <li>
+    //       <a href="">Localización de tiendas</a>
+    //     </li>
+    //   </ol>
+    // </footer>
   )
 }
 export default Footer
