@@ -1,7 +1,7 @@
 const Carga = () => {
   return (
     <>
-      <div className="lastSection flex h-screen w-screen flex-col overflow-hidden bg-[url('/public/charge.avif')] bg-cover bg-center lg:bg-[url('/public/charge.avif')]">
+      <div className="lastSection flex h-screen w-screen flex-col overflow-hidden bg-[url('/charge.avif')] bg-cover bg-center lg:bg-[url('/charge.avif')]">
         <div>
           <h1 className="mt-48 flex justify-center px-6 text-4xl font-semibold leading-10 tracking-tighter">
             Accesorios
