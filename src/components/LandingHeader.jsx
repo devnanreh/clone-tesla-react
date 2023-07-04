@@ -1,4 +1,29 @@
+import React, { useState } from 'react'
+
 const LandingHeader = () => {
+  window.addEventListener('load', function () {
+    // Intersection Observer
+    const headerElement = document.querySelector('#landing-header')
+    const sectionHome = document.querySelector('#home-intro')
+
+    const observerOptions = {
+      root: null, // default to the viewport
+      rootMargin: '0px', // as soon as the element is visible
+      threshold: 0.9, // visibility ratio
+    }
+
+    const sectionHomeObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          headerElement.classList.add('invert')
+        } else {
+          headerElement.classList.remove('invert')
+        }
+      })
+    }, observerOptions)
+
+    sectionHomeObserver.observe(sectionHome)
+  })
   // Backdrop
   const listItem = document.querySelectorAll('#landing-header li')
   const menuBackDrop = document.querySelector('#menu-backdrop')
@@ -20,38 +45,82 @@ const LandingHeader = () => {
     })
   })
 
-  // Intersection Observer
-  const headerElement = document.querySelector('#landing-header')
-  const sectionOne = document.querySelector('.home-intro')
+  // Menu navbar
+  const [menuNav, setMenuNav] = useState(false)
 
-  const observerOptions = {
-    root: null, // default to the viewport
-    rootMargin: '0px', // as soon as the element is visible
-    threshold: 0.9, // visibility ratio
+  const handleMenuNav = () => {
+    setMenuNav(!menuNav)
   }
-
-  const sectionOneObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        headerElement.classList.add('invert')
-      } else {
-        headerElement.classList.remove('invert')
-      }
-    })
-  }, observerOptions)
-
-  sectionOneObserver.observe(sectionOne)
 
   return (
     <header
       id="landing-header"
-      className="absolute z-50 flex h-14 w-full text-black transition duration-500"
+      className="absolute z-50 grid h-14 w-full grid-cols-2 justify-between text-black transition duration-500 lg:grid lg:grid-cols-3"
     >
-      <div className="flex w-2/6 ps-8">
+      <div className="flex justify-start lg:ps-8">
         <img className="m-4 flex w-32" src="/public/teslaLogo.svg" alt="Tesla Logo" />
       </div>
-      <div className="flex w-2/6 items-center justify-center">
-        <ol className="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-current">
+
+      <div className="hidden justify-center lg:inline-flex">
+        <ul className="flex items-center justify-center text-sm hover:cursor-pointer [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-current">
+          <li>
+            <a href="https://tesla.com/models">Model S</a>
+          </li>
+          <li>
+            <a href="https://tesla.com/model3">Model 3</a>
+          </li>
+          <li>
+            <a href="https://tesla.com/modelx">Model X</a>
+          </li>
+          <li>
+            <a href="https://tesla.com/modely">Model Y</a>
+          </li>
+          <li>
+            <a href="https://tesla.com/solarroof">Powerwall</a>
+          </li>
+          <li>
+            <a href="https://tesla.com/solarpanels">Carga</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="hidden justify-end pe-8 lg:inline-flex">
+        <ul className="flex items-center justify-center text-sm hover:cursor-pointer [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-current">
+          <li>
+            <a href="">Soporte</a>
+          </li>
+          <li>
+            <a href="">Tienda</a>
+          </li>
+          <li>
+            <a href="">Cuenta</a>
+          </li>
+          <li onClick={handleMenuNav}>
+            <a href="#">Menu</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="flex justify-end py-2 pe-4 lg:hidden lg:pe-8">
+        <button
+          onClick={handleMenuNav}
+          className="items-center rounded bg-black/5 px-4 py-2 text-sm font-medium shadow-sm hover:bg-black/10"
+        >
+          Menu
+        </button>
+      </div>
+
+      <div
+        className={
+          menuNav
+            ? 'absolute right-0 top-0 h-screen w-80 overflow-scroll bg-white'
+            : 'fixed right-full'
+        }
+      >
+        <div onClick={handleMenuNav} className=" flex justify-end px-8 py-7 text-xl">
+          X
+        </div>
+        <ul className="text-sm [&>li>a]:cursor-pointer [&>li]:px-8 [&>li]:py-3">
           <li>
             <a href="">Model S</a>
           </li>
@@ -65,17 +134,49 @@ const LandingHeader = () => {
             <a href="">Model Y</a>
           </li>
           <li>
+            <a href="">Inventario disponible</a>
+          </li>
+          <li>
+            <a href="">Inventario usados</a>
+          </li>
+          <li>
+            <a href="">Tasación</a>
+          </li>
+          <li>
+            <a href="">Prueba de conducción</a>
+          </li>
+          <li>
+            <a href="">Coches de empresa</a>
+          </li>
+          <li>
             <a href="">Powerwall</a>
+          </li>
+          <li>
+            <a href="">Energia</a>
+          </li>
+          <li>
+            <a href="">Energia para uso comercial</a>
+          </li>
+          <li>
+            <a href="">Utilities</a>
           </li>
           <li>
             <a href="">Carga</a>
           </li>
-        </ol>
-      </div>
-      <div className="flex w-2/6 items-center justify-end pe-8">
-        <ul className="flex text-sm [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-current">
+          <li>
+            <a href="">Empleo</a>
+          </li>
+          <li>
+            <a href="">Donde estamos</a>
+          </li>
+          <li>
+            <a href="">Eventos</a>
+          </li>
           <li>
             <a href="">Soporte</a>
+          </li>
+          <li>
+            <a href="">Relaciones con los inversores</a>
           </li>
           <li>
             <a href="">Tienda</a>
@@ -83,11 +184,9 @@ const LandingHeader = () => {
           <li>
             <a href="">Cuenta</a>
           </li>
-          <li>
-            <a href="">Menu</a>
-          </li>
         </ul>
       </div>
+
       {/* BackDrop */}
       <div
         id="menu-backdrop"

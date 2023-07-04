@@ -1,31 +1,32 @@
 const Footer = () => {
-  const footerElement = document.querySelector('#landing-footer')
-  const lastSection = document.querySelector('.lastSection')
+  window.addEventListener('load', function () {
+    const footerElement = document.querySelector('#landing-footer')
+    const lastSection = document.querySelector('.lastSection')
 
-  const observerOptions = {
-    root: null, // default to the viewport
-    rootMargin: '0px', // as soon as the element is visible
-    threshold: 0.9, // visibility ratio
-  }
+    const observerOptions = {
+      root: null, // default to the viewport
+      rootMargin: '0px', // as soon as the element is visible
+      threshold: 0.9, // visibility ratio
+    }
 
-  const lastSectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        footerElement.classList.remove('invisible')
-      } else {
-        footerElement.classList.add('invisible')
-      }
-    })
-  }, observerOptions)
-
-  lastSectionObserver.observe(lastSection)
+    const lastSectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          footerElement.classList.remove('invisible')
+        } else {
+          footerElement.classList.add('invisible')
+        }
+      })
+    }, observerOptions)
+    lastSectionObserver.observe(lastSection)
+  })
 
   return (
     <footer
       id="landing-footer"
-      className="footer-landing invisible fixed bottom-0 z-50 mt-auto flex h-12 w-full justify-center"
+      className="invisible fixed bottom-0 z-50 mt-auto flex h-12 w-full justify-center"
     >
-      <ol className="flex text-xs [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:pb-6 [&>li>a]:text-slate-500">
+      <ol className="invisible flex flex-col items-center text-xs lg:visible lg:flex-row [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:pb-6 [&>li>a]:text-slate-500">
         <li>
           <a href="">Tesla © 2023</a>
         </li>
