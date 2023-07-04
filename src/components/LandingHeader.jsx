@@ -58,7 +58,7 @@ const LandingHeader = () => {
       className="absolute z-50 grid h-14 w-full grid-cols-2 justify-between text-black transition duration-500 lg:grid lg:grid-cols-3"
     >
       <div className="flex justify-start lg:ps-8">
-        <img className="m-4 flex w-32" src="/public/logo.svg" alt="Tesla Logo" />
+        <img className="m-4 flex w-32" src="../../public/logo.svg" alt="Tesla Logo" />
       </div>
 
       <div className="hidden justify-center lg:inline-flex">

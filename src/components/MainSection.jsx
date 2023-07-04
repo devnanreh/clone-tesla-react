@@ -7,7 +7,7 @@ const MainSection = () => {
           loop
           muted
           className="absolute z-10 h-full w-full overflow-hidden object-cover object-center"
-          src="/public/intro.webm"
+          src="../../public/intro.webm"
         />
         <div className="relative z-40 flex h-screen w-full flex-col items-center">
           <h1 className="mt- mt-48 text-4xl font-semibold text-white">Disfrute de Tesla</h1>
