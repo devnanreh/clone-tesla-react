@@ -7,11 +7,11 @@ const MainSection = () => {
           loop
           muted
           className="absolute z-10 h-full w-full overflow-hidden object-cover object-center"
-          src="/intro.webm"
+          src="src/assets/home-intro.webm"
         />
         <div className="relative z-40 flex h-screen w-full flex-col items-center">
           <h1 className="mt- mt-48 text-4xl font-semibold text-white">Disfrute de Tesla</h1>
-          <p className="mx-6 mb-4 mt-2 text-sm text-white">
+          <p className="mx-6 mb-4 mt-2 text-center text-sm text-white">
             Programe una prueba de conducción hoy mismo
           </p>
           <div className="flex flex-grow flex-col justify-end pb-6 lg:flex-grow lg:pb-16">

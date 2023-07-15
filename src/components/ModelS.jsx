@@ -1,7 +1,7 @@
 const ModelS = () => {
   return (
     <>
-      <div className="flex h-screen flex-col overflow-hidden bg-[url('/modelS.avif')] bg-cover bg-center lg:bg-[url('/modelS.avif')]">
+      <div className="flex h-screen flex-col overflow-hidden bg-[url('src/assets/modelS-mobile.avif')] bg-cover bg-center lg:bg-[url('src/assets/modelS.avif')]">
         <div>
           <h1 className="mt-48 flex justify-center px-6 text-4xl font-semibold leading-10 tracking-tighter">
             Model S
