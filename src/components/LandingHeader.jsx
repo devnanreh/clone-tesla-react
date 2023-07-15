@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const LandingHeader = () => {
-  window.addEventListener('load', function () {
+  useEffect(() => {
     // Intersection Observer
     const headerElement = document.querySelector('#landing-header')
     const sectionHome = document.querySelector('#home-intro')
@@ -23,7 +23,8 @@ const LandingHeader = () => {
     }, observerOptions)
 
     sectionHomeObserver.observe(sectionHome)
-  })
+  }, [])
+
   // Backdrop
   const listItem = document.querySelectorAll('#landing-header li')
   const menuBackDrop = document.querySelector('#menu-backdrop')
@@ -58,7 +59,7 @@ const LandingHeader = () => {
       className="absolute z-50 grid h-14 w-full grid-cols-2 justify-between text-black transition duration-500 lg:grid lg:grid-cols-3"
     >
       <div className="flex justify-start lg:ps-8">
-        <img className="m-4 flex w-32" src="/logo.svg" alt="Tesla Logo" />
+        <img className="m-4 flex w-32" src="src/assets/logo.svg" alt="Tesla Logo" />
       </div>
 
       <div className="hidden justify-center lg:inline-flex">

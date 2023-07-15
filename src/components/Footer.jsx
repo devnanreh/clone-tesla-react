@@ -1,5 +1,7 @@
+import { useEffect } from 'react'
+
 const Footer = () => {
-  window.addEventListener('load', function () {
+  useEffect(() => {
     const footerElement = document.querySelector('#landing-footer')
     const lastSection = document.querySelector('.lastSection')
 
@@ -19,7 +21,7 @@ const Footer = () => {
       })
     }, observerOptions)
     lastSectionObserver.observe(lastSection)
-  })
+  }, [])
 
   return (
     <footer
@@ -47,31 +49,6 @@ const Footer = () => {
         </li>
       </ol>
     </footer>
-    // <footer
-    //   id="landing-footer"
-    //   className="fixed bottom-0 z-50 mt-auto flex h-12 w-full justify-center"
-    // >
-    //   <ol className="flex flex-col items-center text-xs lg:flex-row [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:pb-6 [&>li>a]:text-slate-500">
-    //     <li>
-    //       <a href="">Tesla © 2023</a>
-    //     </li>
-    //     <li>
-    //       <a href="">Privacidad y legal</a>
-    //     </li>
-    //     <li>
-    //       <a href="">Contacto</a>
-    //     </li>
-    //     <li>
-    //       <a href="">Noticias</a>
-    //     </li>
-    //     <li>
-    //       <a href="">Seguir informado</a>
-    //     </li>
-    //     <li>
-    //       <a href="">Localización de tiendas</a>
-    //     </li>
-    //   </ol>
-    // </footer>
   )
 }
 export default Footer
