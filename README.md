@@ -18,5 +18,5 @@
 
 ## View Mobile version
 
-<img src="public/captures/ViewMobile1.png" width="400">
-<img src="public/captures/ViewMobile2.png" width="400">
+<img src="public/captures/ViewMobile1.png" width="350">
+<img src="public/captures/ViewMobile2.png" width="350">
