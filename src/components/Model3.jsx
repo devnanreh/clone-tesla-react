@@ -1,7 +1,7 @@
 const Model3 = () => {
   return (
     <>
-      <div className="flex h-screen w-screen flex-col overflow-hidden bg-[url('assets/model3-mobile.avif')] bg-cover bg-center lg:bg-[url('assets/model3.avif')]">
+      <div className="flex h-screen w-screen flex-col overflow-hidden bg-[url('assets/model3-Mobile.avif')] bg-cover bg-center lg:bg-[url('assets/model3.avif')]">
         <div>
           <h1 className="mt-28 flex justify-center px-6 text-4xl font-semibold leading-10 tracking-wide lg:mt-48">
             Model 3
