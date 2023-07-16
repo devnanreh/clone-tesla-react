@@ -28,7 +28,7 @@ const Footer = () => {
       id="landing-footer"
       className="fixed bottom-0 z-50 mt-auto flex h-12 w-full flex-col items-center justify-center"
     >
-      <ol className="flex h-4 flex-col items-center text-xs lg:flex-row [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:pb-6 [&>li>a]:text-slate-500">
+      <ol className="flex h-4 flex-col items-center text-xs lg:flex-row [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:pb-6 [&>li>a]:text-slate-100">
         <li>
           <a href="">Tesla © 2023</a>
         </li>
