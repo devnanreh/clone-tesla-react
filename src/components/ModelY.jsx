@@ -1,9 +1,9 @@
 const ModelY = () => {
   return (
     <>
-      <div className="flex h-screen w-screen flex-col overflow-hidden bg-[url('src/assets/modelY-Mobile.avif')] bg-cover bg-center lg:bg-[url('src/assets/modelY.avif')]">
+      <div className="flex h-screen w-screen flex-col overflow-hidden bg-[url('assets/modelY-Mobile.avif')] bg-cover bg-center lg:bg-[url('assets/modelY.avif')]">
         <div>
-          <h1 className="mt-48 flex justify-center px-6 text-4xl font-semibold leading-10 tracking-tighter">
+          <h1 className="mt-48 flex justify-center px-6 text-4xl font-semibold leading-10 tracking-wide">
             Model Y
           </h1>
           <p className="flex justify-center px-6 pb-3.5 pt-1 text-sm font-normal leading-5 underline underline-offset-4">

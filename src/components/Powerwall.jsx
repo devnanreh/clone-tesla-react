@@ -1,9 +1,9 @@
 const Powerwall = () => {
   return (
     <>
-      <div className="flex h-screen w-screen flex-col overflow-hidden bg-[url('src/assets/solar-Mobile.avif')] bg-cover bg-center lg:bg-[url('src/assets/solar.avif')]">
+      <div className="flex h-screen w-screen flex-col overflow-hidden bg-[url('assets/solar-Mobile.avif')] bg-cover bg-center lg:bg-[url('assets/solar.avif')]">
         <div>
-          <h1 className="mt-48 flex justify-center px-6 text-4xl font-semibold leading-10 tracking-tighter">
+          <h1 className="mt-48 flex justify-center px-6 text-4xl font-semibold leading-10 tracking-wide">
             Solar y Powerwall
           </h1>
           <p className="flex justify-center px-6 pb-3.5 pt-1 text-sm font-normal leading-5">
