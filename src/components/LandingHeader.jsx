@@ -98,17 +98,17 @@ const LandingHeader = () => {
             <a href="">Cuenta</a>
           </li>
           <li onClick={handleMenuNav}>
-            <a href="#">Menu</a>
+            <a href="#">Menú</a>
           </li>
         </ul>
       </div>
 
-      <div className="flex justify-end py-2 pe-4 lg:hidden lg:pe-8">
+      <div className="flex justify-end py-3 pe-2 lg:hidden lg:pe-8">
         <button
           onClick={handleMenuNav}
-          className="items-center rounded bg-black/5 px-4 py-2 text-sm font-semibold shadow-sm hover:bg-black/10"
+          className="items-center rounded bg-black/5 px-4 text-sm font-semibold shadow-sm hover:bg-black/10"
         >
-          Menu
+          Menú
         </button>
       </div>
 
@@ -119,10 +119,10 @@ const LandingHeader = () => {
             : 'fixed right-full'
         }
       >
-        <div onClick={handleMenuNav} className=" flex justify-end px-8 py-7 text-xl">
+        <div onClick={handleMenuNav} className=" flex justify-end px-8 py-8 text-xl">
           X
         </div>
-        <ul className="text-sm [&>li>a]:cursor-pointer [&>li]:px-8 [&>li]:py-3">
+        <ul className="text-sm [&>li>a]:cursor-pointer [&>li]:px-8 [&>li]:pb-6">
           <li>
             <a href="">Model S</a>
           </li>
