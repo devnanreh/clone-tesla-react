@@ -1,4 +1,5 @@
 import homeVideo from '../assets/home-intro.webm'
+import homeVideoMobile from '../assets/home-intro-mobile.webm'
 
 const MainSection = () => {
   return (
@@ -9,8 +10,9 @@ const MainSection = () => {
           loop
           muted
           className="absolute z-10 h-full w-full overflow-hidden object-cover object-center"
-          src={homeVideo}
+          src={window.innerWidth >= 768 ? homeVideo : homeVideoMobile}
         />
+
         <div className="relative z-40 flex h-screen w-full flex-col items-center">
           <h1 className="mt-28 text-4xl font-semibold text-white lg:mt-48">Disfrute de Tesla</h1>
           <p className="mx-6 mb-4 mt-2 text-center text-sm text-white">
